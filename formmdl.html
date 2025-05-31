@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario con MDL</title>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <style>
+    .mdl-card {
+      margin: 50px auto;
+      padding: 20px;
+      width: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="mdl-typography--text-center">Registro de Usuario</h1>
+
+  <div class="mdl-card mdl-shadow--4dp">
+    <form action="#">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="nombre" required>
+        <label class="mdl-textfield__label" for="nombre">Nombre completo</label>
+      </div>
+      <br>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="email" id="correo" required>
+        <label class="mdl-textfield__label" for="correo">Correo electrónico</label>
+      </div>
+      <br>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="date" id="fecha">
+        <label class="mdl-textfield__label" for="fecha">Fecha de nacimiento</label>
+      </div>
+      <br><br>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+        Enviar
+      </button>
+    </form>
+  </div>
+
+</body>
+</html>
