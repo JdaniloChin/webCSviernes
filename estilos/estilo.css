@@ -1,0 +1,53 @@
+*{
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    color:darkblue;
+}
+
+.form-box{
+    max-width: 400px;
+    margin: auto;
+    border: 2px solid steelblue;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+}
+
+button{
+    background-color: darkblue;
+    color: white;
+    width:100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium';
+}
+
+input[type]{
+    width:100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="email"]{
+    color: blue;
+
+}
+    
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: red;
+    cursor: pointer;
+}
