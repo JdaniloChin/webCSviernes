@@ -64,7 +64,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="formularioUsuario" method="post">
+                    <form id="formularioUsuario">
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre Completo</label>
                             <input type="text" class="form-control" id="nombre" placeholder="Juan Pérez">
@@ -108,11 +108,46 @@
                             <input class="form-check-input" type="checkbox" id="acepta">
                             <label class="form-check-label" for="acepta">Acepta términos y condiciones</label>
                         </div>
-                        <buton type="submit" class="btn btn-success">Guardar usuario</buton>
+                        <button type="submit" class="btn btn-success">Guardar usuario</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('formularioUsuario');
+        const tabla = document.getElementById('tablaUsuarios');
+        let contador = tabla.rows.length + 1;
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const pais = document.getElementById('pais').value;
+            const genero = document.querySelector('input[name="genero"]:checked')?.value || "No especificado";
+
+            if(!nombre || !email || !pais == "Seleccione un país"){
+                alert("Por favor, complete todos los campos obligatorios");
+                return;
+            }
+
+            const nuevaFila = tabla.insertRow();
+            nuevaFila.innerHTML = `
+            <td>${contador++}</td>
+            <td>${nombre}</td>
+            <td>${email}</td>
+            <td>${pais}</td>
+            <td>${genero}</td>
+                 `;
+            
+            form.reset();
+
+            const modal = bootstrap.Modal.getInstance(document.getElementById('modalFormulario'));
+            modal.hide();
+        })
+    })
+</script>
 </html>
