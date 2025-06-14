@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 3 - Mis primeros pasos con JavaScript</title>
+    <link rel="stylesheet" href="./estilos/estilo2.css">
+</head>
+<body>
+    <header>
+        <h1>Unidad 3: Programación Frontend con Javascript</h1>
+        <p>Curso básico para principiantes</p>
+    </header>
+    <main>
+        <section id="introduccion">
+            <h2>Introducción</h2>
+            <p>En esta unidad aprenderemos los fundamentos de JavaScript, el lenguaje de programación que permite crear interactividad en las páginas web.</p>
+        </section>
+        <section id="variable">
+            <h2>Declaración de variables</h2>
+            <p>En JavaScript, podemos declarar variables utilizando las palabras clave <code>var</code>, <code>let</code> y <code>const</code>. Aquí hay un ejemplo:</p>
+            <pre><code>var nombre = "Juan";
+let edad=30; 
+const PI = 3.14;</code></pre>
+            <p>La diferencia entre ellas es que <code>var</code> tiene un alcance global o de función, <code>let</code> tiene un alcance de bloque y <code>const</code> se utiliza para declarar constantes.</p> 
+            <button onclick="mostrarVariables()">Mostrar Variables</button>   
+        </section>
+        <section id="condicionales">
+            <h2>Condicionales</h2>
+            <p>Los condicionales nos permiten ejecutar diferentes bloques de código según ciertas condiciones. Aquí hay un ejemplo:</p>
+            <pre><code>if (edad >= 18) {
+    console.log("Eres mayor de edad");
+} else {        
+    console.log("Eres menor de edad");
+}</code></pre>
+            <p>En este caso, si la variable <code>edad</code> es mayor o igual a 18, se mostrará un mensaje indicando que la persona es mayor de edad; de lo contrario, se mostrará que es menor de edad.</p>   
+            <button onclick="evaluarEdad()">Evaluar Edad</button>
+        </section>
+        <section id="eventos">
+            <h2>Eventos</h2>
+            <p>Los eventos son acciones que ocurren en la página web, como hacer clic en un botón o mover el mouse. Podemos manejar estos eventos utilizando JavaScript. Aquí hay un ejemplo:</p>
+            <pre><code>document.getElementById("miBoton").addEventListener("click", function() {    
+    alert("¡Botón clickeado!");
+});</code></pre>
+            <p>En este caso, cuando el usuario hace clic en el botón con el ID <code>miBoton</code>, se mostrará una alerta.</p>
+            <button id="btnSaludo">Clic aquí</button>
+        </section>
+    </main>
+    <script src="./javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
