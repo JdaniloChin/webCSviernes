@@ -29,3 +29,12 @@ pre{
     overflow-x: auto;
     border-radius: 4px;
 }
+
+button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
