@@ -4,15 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/estilo2.css">
     <title>Document</title>
 </head>
 <body>
+    <header>
+        "<h1>Mi primera página PHP</h1>"
+    </header>
 <?php
-   echo "<h1>Mi primera página PHP</h1>";
    $nombre="Maria";
    $a = 5; 
    $b = "5";
-
+   echo "<section><h2>Variables</h2>"; 
    if ($a == $b) {
         echo "<p>Los valores son iguales</p>";
    }
@@ -26,6 +29,8 @@
     else {
           echo "<p>Los valores o tipos son diferentes</p>";
     }   
-?>    
+   echo "</section>"; 
+?> 
+   
 </body>
 </html>
