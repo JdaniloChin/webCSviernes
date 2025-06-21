@@ -32,7 +32,7 @@ if($_SERVER["REGUEST_METHOD"] == "POST") {
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="card p-4 shadow-lg w-100" style="max-width: 400px;">
             <h3 class="card-title text-center mb-4">Register </h3>
-            <form id="register-form" action="dashboard.html" method="post">
+            <form id="register-form" method="post">
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                     <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
