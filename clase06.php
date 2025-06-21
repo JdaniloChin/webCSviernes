@@ -24,16 +24,35 @@
    $aprobado = true;
    echo "<h2>Bievenida $nombre a la clase de PHP</h2>";
     echo "<p>La variable \$nombre es de tipo " . gettype($nombre) . "</p>"; 
-    
+
    echo "<section><h2>Variables</h2>"; 
     echo "<p>Se utiliza el <code>if (variable == variable)</code> para evaluar los valores</p>";
+
+    ?>
+    <code><pre>if ($a == $b) {
+        echo "<p>Los valores son iguales</p>";
+   }
+   else {
+        echo "<p>Los valores son diferentes</p>";
+   }</pre></code>
+
+   <?php
    if ($a == $b) {
         echo "<p>Los valores son iguales</p>";
    }
    else {
         echo "<p>Los valores son diferentes</p>";
    }
-    echo "<p>Se utiliza el <code>if (variable === variable)</code> para evaluar los valores y los tipos</p>";
+   ?>
+    <p>Se utiliza el <code>if (variable === variable)</code> para evaluar los valores y los tipos</p>
+    <code><pre>if ($a === $b) {
+          echo "<p>Los valores y tipos son iguales</p>";
+    }
+    else {
+          echo "<p>Los valores o tipos son diferentes</p>";
+    } </pre></code>
+
+    <?php
     if ($a === $b) {
           echo "<p>Los valores y tipos son iguales</p>";
     }
