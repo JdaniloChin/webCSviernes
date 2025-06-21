@@ -1,3 +1,24 @@
+<?php
+session_start();
+if($_SERVER["REGUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $confirm_password = $_POST['confirm-password'];
+
+    // Validate email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<div class='alert alert-danger'>Invalid email format</div>";
+    } elseif ($password !== $confirm_password) {
+        echo "<div class='alert alert-danger'>Passwords do not match</div>";
+    } else {
+        $_SESSION['email'] = $email;
+        $_SESSION['password'] = $password;
+        header("Location: index.html");
+        exit();
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,15 +35,15 @@
             <form id="register-form" action="dashboard.html" method="post">
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="input-group mb-3">    
                     <span class="input-group-text"><i class="fas fa-lock"></i></span>               
-                    <input type="password" class="form-control" id="password" required placeholder="Password">
+                    <input type="password" class="form-control" id="password" name="password" required placeholder="Password">
                 </div>
                 <div class="input-group mb-3">    
                     <span class="input-group-text"><i class="fas fa-lock"></i></span>               
-                    <input type="password" class="form-control" id="confirm-password" required placeholder="Confirm Password">
+                    <input type="password" class="form-control" id="confirm-password" name="confirm-password" required placeholder="Confirm Password">
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Register</button>
             </form>
@@ -33,6 +54,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/register.js"></script>
+    
 </body>
 </html>
