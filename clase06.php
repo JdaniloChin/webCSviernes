@@ -19,6 +19,13 @@
    else {
         echo "<p>Los valores son diferentes</p>";
    }
+
+    if ($a === $b) {
+          echo "<p>Los valores y tipos son iguales</p>";
+    }
+    else {
+          echo "<p>Los valores o tipos son diferentes</p>";
+    }   
 ?>    
 </body>
 </html>
