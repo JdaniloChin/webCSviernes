@@ -13,12 +13,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
-        header("Location: ./app-tareas/index.html");
+        header("Location: index.html");
         exit();
     }
 }else{
     // If the request method is not POST, redirect to the registration page
-    header("Location: ./app-tareas/register.php");
+    header("Location: register.php");
     exit();
 }
 
@@ -53,7 +53,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
             <!-- <div id="register-error" class="text-danger mt-3" style="display: none;">Password and confimation don't match</div> -->
             <div id="register-error" class="mt-3"></div>
-            <p class="text-center mt-3">You already have a account? <a href="index.html">Login here</a></p>
+            <p class="text-center mt-3">You already have a account? <a href="./index.html">Login here</a></p>
         </div>
     </div>
 
