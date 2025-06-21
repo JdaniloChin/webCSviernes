@@ -9,6 +9,16 @@
 <body>
 <?php
    echo "<h1>Mi primera página PHP</h1>";
+   $nombre="Maria";
+   $a = 5; 
+   $b = "5";
+
+   if ($a == $b) {
+        echo "<p>Los valores son iguales</p>";
+   }
+   else {
+        echo "<p>Los valores son diferentes</p>";
+   }
 ?>    
 </body>
 </html>
