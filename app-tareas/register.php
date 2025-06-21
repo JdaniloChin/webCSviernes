@@ -13,12 +13,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
-        header("Location: index.html");
+        header("Location: ./app-tareas/index.html");
         exit();
     }
 }else{
     // If the request method is not POST, redirect to the registration page
-    header("Location: register.php");
+    header("Location: ./app-tareas/register.php");
     exit();
 }
 
