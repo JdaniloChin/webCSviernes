@@ -9,20 +9,21 @@
 </head>
 <body>
     <header>
-        "<h1>Mi primera página PHP</h1>"
+        <h1>Mi primera página PHP</h1>
     </header>
 <?php
    $nombre="Maria";
    $a = 5; 
    $b = "5";
    echo "<section><h2>Variables</h2>"; 
+    echo "<p>Se utiliza el <code>if (variable == variable)</code> para evaluar los valores</p>";
    if ($a == $b) {
         echo "<p>Los valores son iguales</p>";
    }
    else {
         echo "<p>Los valores son diferentes</p>";
    }
-
+    echo "<p>Se utiliza el <code>if (variable === variable)</code> para evaluar los valores y los tipos</p>";
     if ($a === $b) {
           echo "<p>Los valores y tipos son iguales</p>";
     }
