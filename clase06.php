@@ -60,6 +60,72 @@
           echo "<p>Los valores o tipos son diferentes</p>";
     }   
    echo "</section>"; 
+   $suma = 0;
+   $arr_notas = array($nota1, $nota2, $nota3, $nota4); 
+    for ($i = 0; $i < count($arr_notas); $i++){
+        $suma += $arr_notas[$i];
+    } 
+
+    $promedio = $suma / count($arr_notas);
+
+    if($promedio < 70){
+        $aprobado = false;
+    }
+
+    echo "<section><h2>Condicionales</h2>";
+    echo "<p>El promedio de las notas es: $promedio</p>";
+    if($aprobado){
+        echo "<p>¡Felicidades! has aprobado</p>";
+    } else {
+        echo "<p>Lo siento, no has aprobado</p>";
+    }
+
+    switch($promedio){
+        case $promedio >= 90:
+            echo "<p>Excelente</p>";
+            break;
+        case $promedio >= 80:
+            echo "<p>Muy bien</p>";
+            break;     
+        case $promedio >= 70:
+            echo "<p>Bien</p>";
+            break;  
+        default:
+            echo "<p>Necesitas mejorar</p>";
+            break;  
+    }
+    echo "</section>";
+    
+    echo "<section><h2>Ciclos</h2>";
+    $contador = 0;
+    foreach ($arr_notas as $nota) {
+        $contador++;
+        if($nota < 70) {
+        echo "<p>Nota$contador reprobada: $nota</p>";
+        }else {
+        echo "<p>Nota$contador aprobada: $nota</p>";
+        }
+    }
+    echo "</section>";
+    echo "<section><h2>Operadores logicos</h2>";
+
+    if($edad >= 18 || $edad2 >= 18){
+        echo "<p>Al menos una persona es mayor de edad</p>";
+    } else {
+        echo "<p>Ninguna persona es mayor de edad</p>";
+    }
+
+    if($edad >= 18 && $edad2 >= 18){
+        echo "<p>Ambas personas son mayores de edad</p>";
+    } else {
+        echo "<p>Al menos una persona no es mayor de edad</p>";
+    }
+
+    if(!$aprobado){
+        echo "<p>Lo siento, debe repetir el curso.</p>";
+    } else {
+        echo "<p>¡Felicidades! Nos vemos en el siguiente curso.</p>";
+    }
 ?> 
    
 </body>
