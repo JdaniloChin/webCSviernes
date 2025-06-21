@@ -15,6 +15,16 @@
    $nombre="Maria";
    $a = 5; 
    $b = "5";
+   $edad = 15;
+   $edad2 = 35;
+   $nota1 = 80;
+   $nota2 = 65;
+   $nota3 = 70.5;
+   $nota4 = 40.2;
+   $aprobado = true;
+   echo "<h2>Bievenida $nombre a la clase de PHP</h2>";
+    echo "<p>La variable \$nombre es de tipo " . gettype($nombre) . "</p>"; 
+    
    echo "<section><h2>Variables</h2>"; 
     echo "<p>Se utiliza el <code>if (variable == variable)</code> para evaluar los valores</p>";
    if ($a == $b) {
