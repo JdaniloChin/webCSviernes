@@ -1,6 +1,9 @@
 <?php 
 session_start();
-
+if (!isset($_SESSION['nombre'])) {
+    header("Location: ./index.php");
+    exit();
+}
 
 ?>
 <!DOCTYPE html>
@@ -13,8 +16,15 @@ session_start();
     <title>Inicio</title>
 </head>
 <body>
+  <div class="container-fluid">
+    <div class="row min-vh-100">
+      <?php include 'include/menu.php'; ?>
+      <main class="col-md-9 p-4">
     <?php
       echo "<H1 clasa='text-center'>Bienvenido - " . $_SESSION['nombre'] . "</H1>"; 
     ?>
+    </main>
+    </div>
+  </div>
 </body>
 </html>
