@@ -3,20 +3,8 @@ session_start();
 if (!isset($_SESSION['nombre'])) {
     header("Location: ../index.php");
     exit();
-}else {
-  require_once("include/conexion.php");
-
-  //CRUD de usuarios
-
-  //Read->Select de todos los usuarios
-  $usuarios_data = [];
-  $resultado =  $stmt = $mysqli->query("SELECT Id_usuario,Nombre, Fecha_Nacimiento, Email FROM usuarios");
-  if($resultado && $resultado->num_rows > 0){
-    while($row = $resultado->fetch_assoc()){
-      $usuarios_data[] = $row;
-    }
-  }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -47,17 +35,7 @@ if (!isset($_SESSION['nombre'])) {
         </thead>
         <tbody>
             <!-- Aquí se agregan los usuarios dinámicamente -->
-             <?php foreach ($usuarios_data as $usuario): ?>
-             <tr>
-                <td><?= htmlspecialchars($usuario['Nombre'])?></td>
-                <td><?= htmlspecialchars($usuario['Fecha_Nacimiento'])?></td>
-                <td><?= htmlspecialchars($usuario['Email'])?></td>
-                <td>
-                  <a href="?editar=<?= $usuario['Id_usuario'] ?>" class="btn btn-warning btn-sm">Editar</a>
-                  <a href="?eliminar=<?= $usuario['Id_usuario'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Está seguro de eliminar este usuario?')">Eliminar</a>
-                </td>
-             </tr>
-             <?php endforeach; ?>
+             
         </tbody>
     </table>
 </main>
