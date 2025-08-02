@@ -52,6 +52,6 @@ if (!isset($_SESSION['nombre'])) {
 </div>
 </div>
 
-<script></script>
+<script src="./javascript/consumo_pokeApi.js"></script>
 </body>
 </html>
